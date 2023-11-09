@@ -14,20 +14,6 @@ const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
-    // Validation check. Check if the input field is not empty
-    if (!inputFieldEl.value.trim()) {
-        alert("Please type in your item ❤️")
-        return
-    }
-
-    // The trim() function ensures that even if the user only enters white spaces,
-    // it still counts as empty.
-    // It trims any white space from the beginning and end of the input value.
-
-    // The "!" is a logical "NOT" operator. It inverts the truthiness of the value
-    // that follows it.
-    // It checks if the trimmed value is falsy (an empty string here).
-
     let inputValue = inputFieldEl.value
     
     push(shoppingListInDB, inputValue)
